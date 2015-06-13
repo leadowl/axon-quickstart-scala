@@ -8,8 +8,11 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 libraryDependencies ++= {
   val spray_version = "1.3.3"
+  val scynapse_version = "0.4"
 
   Seq(
+    "xalan" % "serializer" % "2.7.2",
+
     "io.spray" %% "spray-caching" % spray_version,
     "io.spray" %% "spray-can" % spray_version,
     "io.spray" %% "spray-client" % spray_version,
@@ -21,6 +24,11 @@ libraryDependencies ++= {
     "io.spray" %% "spray-testkit" % spray_version,
     "io.spray" %% "spray-util" % spray_version,
     "io.spray" %% "spray-json" % "1.3.2",
+
+    "org.axonframework.scynapse" %% "scynapse-core" % scynapse_version,
+//    "org.axonframework.scynapse" %% "scynapse-akka" % scynapse_version,
+    "org.axonframework.scynapse" %% "scynapse-test" % scynapse_version % "test",
+
     "org.scalatest" %% "scalatest" % "2.2.4" % "test",
     "org.scalacheck" %% "scalacheck" % "1.12.2" % "test",
     "org.scalamock" %% "scalamock-scalatest-support" % "3.2" % "test",
@@ -33,7 +41,4 @@ testOptions in Test += Tests.Argument("-oD")
 
 testOptions in Test += Tests.Argument(TestFrameworks.JUnit, "-v")
 
-
-
-
-Revolver.settings
+// Revolver.settings

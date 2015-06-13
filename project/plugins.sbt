@@ -10,4 +10,4 @@ addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.3.8")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-multi-jvm" % "0.3.9")
 
-addSbtPlugin("io.spray" % "sbt-revolver" % "0.7.2")
+//addSbtPlugin("io.spray" % "sbt-revolver" % "0.7.2")
